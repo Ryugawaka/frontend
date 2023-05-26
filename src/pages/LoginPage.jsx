@@ -15,7 +15,7 @@ const LoginPage = () => {
   const handleRegister = async (data) => {
     return await axios
       .post(isRegister ? login : registerPath, data)
-      .then((res) => localStorage.setItem("token", res.headers.authorization))
+      .then((res) => localStorage.setItem("token", res.headers.authorization)).catch((err) => console.log(err.request.response))
       .then(() => navigate("/"));
   };
 
