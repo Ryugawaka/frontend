@@ -57,7 +57,7 @@ const EditProject = () => {
         </div> 
         <div className="flex mb-[2vw] justify-between">
             <p className="mr-[2vw]">Превью</p>
-            <input type='file' className="border border-black outline-none" {...register('preview')} multiple={false}/>
+            <input type='file' className="border border-black outline-none" {...register('preview')} multiple={false} />
         </div> 
         <div className="flex mb-[2vw] justify-between">
             <p className="mr-[2vw]">Описание</p>

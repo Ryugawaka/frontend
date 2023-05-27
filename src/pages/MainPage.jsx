@@ -16,6 +16,7 @@ const sort = async (text1) => {
 
 const MainPage = () => {
   const [projects, setProjects] = useState([]);
+  const [sorting, setSorting] = useState(true);
 
   // получает данные карточек из запроса и записывает их в projects
   useEffect( () => {
@@ -25,11 +26,12 @@ const MainPage = () => {
           accept: "application/json",
           "Access-Control-Allow-Origin": "*",
         },
+        sort: sorting
       })
       .then((res) => res.data)
       .then((data) => setProjects(data.data));
 
-  }, []);
+  }, [sorting]);
 
   const filterProjects = (e) => {
     setTimeout(async () => {
@@ -40,11 +42,12 @@ const MainPage = () => {
     <div>
       <div className="flex justify-between pt-[10vw] px-[2vw]">
         <div>
-          <p className="font-bold text-[1.5vw]">Поиск</p>
+          <p className="font-bold text-start text-[1.5vw]">Поиск</p>
           <input
-            className="border border-black outline-none rounded-md px-[0.4vw] py-[0.2vw] text-[1.5vw]"
+            className="border border-black outline-none rounded-md px-[0.4vw] py-[0.2vw] text-[1.5vw] mr-[1vw]"
             onInput={(e) => filterProjects(e)}
           />
+          <button onClick={() => setSorting(!sorting)}>Cортировать по дате {sorting ? '↑' : '↓'}</button>
         </div>
         <Link to="/add">
           <button className="border border-black px-[2vw] mt-[1vw] py-[1vw]">
