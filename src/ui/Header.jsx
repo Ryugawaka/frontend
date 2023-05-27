@@ -5,8 +5,8 @@ const Header = () => {
   return (
     <div className={`bg-cyan-800 h-20 w-full fixed flex justify-between px-[2vw] border-b border-gray-600 ${location.pathname === '/login' && 'hidden'}`}>
       <Link to="/">
-        <div className="font-bold text-white text-center py-[1vw] text-2xl w-[20vw]">
-          Строительная компания
+        <div className="font-bold text-white text-center py-[1vw] text-2xl w-[25vw]">
+        Транс-Регион-Строй
         </div>
       </Link>
       <Link to="/login">

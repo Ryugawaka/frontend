@@ -12,6 +12,7 @@ import {
 import ProjectPage from "./pages/ProjectPage";
 import EditProject from "./pages/EditProject";
 import CreateProject from "./pages/CreateProject";
+import Footer from "./ui/Footer";
 
 function App() {
   const navigate = useNavigate();
@@ -32,6 +33,7 @@ function App() {
         <Route path="/:id/edit" element={<EditProject />} />
         <Route path="/add" element={<CreateProject />} />
       </Routes>
+      <Footer />
     </div>
   );
 }

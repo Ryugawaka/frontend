@@ -32,7 +32,7 @@ const ProjectPage = () => {
   }
 
   return (
-    <div className=" px-[2vw] pt-[10vw]">
+    <div className=" px-[2vw] py-[10vw]">
       <div className="text-start">
         <p className="text-[3vw] font-bold">{project.name}</p>
         <p className="text-[1.5vw] font-semibold">город {project.cityName}</p>
