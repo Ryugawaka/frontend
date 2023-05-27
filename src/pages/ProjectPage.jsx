@@ -36,6 +36,7 @@ const ProjectPage = () => {
       <div className="text-start">
         <p className="text-[3vw] font-bold">{project.name}</p>
         <p className="text-[1.5vw] font-semibold">город {project.cityName}</p>
+        <p className="text-[1.5vw] mt-[1vw] font-semibold">Цена: {project.price}</p>
         <div className="flex mt-5">
           {project.preview ? (
             <img
